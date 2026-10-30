@@ -7,6 +7,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Brands } from "@/components/sections/Brands";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
+import { AvailablePlans } from "@/components/sections/AvailablePlans";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 const title = "Weu — Communicate. Collaborate. Create.";
@@ -34,11 +35,12 @@ function HomePage() {
       <About />
       <Services />
       {/* <Creatives /> */}
-      <HowItWorks/>
+      <HowItWorks />
       <Brands />
       <Pricing />
+      <AvailablePlans />
       <Testimonials />
-      
+
       <FinalCta />
     </>
   );
