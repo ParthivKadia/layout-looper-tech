@@ -28,3 +28,24 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+```
+docker build \
+  --platform linux/amd64 \
+  -t neelcontractor3/grahaura-main-site:latest .
+```
+
+```
+docker push neelcontractor3/grahaura-main-site:latest
+```
+
+server run command 
+```bash
+docker run -d --name grahaura-main-site   -p 8081:8080   -e VITE_API_BASE_URL=https://api.storely.co.in   --restart unless-stopped   neelcontractor3/grahaura-main-site:latest
+docker run -d --name grahaura-main-site   -p 8081:8081  --restart unless-stopped   neelcontractor3/grahaura-main-site:latest
+or
+docker run -d --name grahaura-main-site \
+  -p 0.0.0.0:8081:8081 \
+  --restart unless-stopped \
+  neelcontractor3/grahaura-main-site:latest
+```

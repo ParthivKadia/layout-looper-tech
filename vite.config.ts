@@ -5,6 +5,8 @@ export default defineConfig({
     server: { entry: "server" },
   },
   nitro: {
-    preset: "vercel",
+    // Vercel is the default deployment target. Docker builds override this
+    // with NITRO_PRESET=node-server so output is written to .output/.
+    preset: process.env.NITRO_PRESET ?? "vercel",
   },
 });

@@ -1,8 +1,20 @@
-
 node_modules
+
+# Build output must always be regenerated inside the image. Leaving stale
+# artifacts in the build context is what shipped an old build to production.
+.output
+.vercel
+.tanstack
+.nitro
+.wrangler
 dist
+dist-ssr
+
 .git
 .env
 .env.*
 !.env.example
 npm-debug.log*
+*.log
+.DS_Store
+**/.DS_Store
